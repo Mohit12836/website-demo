@@ -402,53 +402,20 @@ function openDemoById(demoId) {
   if (titleElem) titleElem.textContent = `${demo.title} (लाइव प्रीव्यू)`;
   if (tagElem) tagElem.textContent = `${demo.categoryName} • 24 घंटे में लाइव`;
 
-  // Render Simulated Store Webpage inside
+  // Render Authentic Full-Length Demo Webpage inside modal
   if (innerContent) {
-    const preview = demo.demoPreview;
     innerContent.innerHTML = `
-      <!-- Simulated Header Bar -->
-      <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #E2E8F0; padding-bottom:0.75rem; margin-bottom:1rem;">
-        <div>
-          <h2 style="font-size:1.25rem; font-weight:900; color:#0F172A;">${preview.brandName}</h2>
-          <span style="font-size:0.75rem; color:#10B981; font-weight:700;">🟢 ऑनलाइन ऑर्डर चालू है • WhatsApp डिलीवरी</span>
-        </div>
-        <button class="btn-glass btn-glass-green" style="padding:0.4rem 0.85rem; font-size:0.8rem;" onclick="alert('डेमो आर्डर सिस्टम सक्रिय है! ग्राहक का आर्डर सीधे आपके WhatsApp पर जाएगा।');">
-          💬 ऑर्डर करें
-        </button>
+      <div style="text-align: center; margin-bottom: 0.85rem; background: #FFFBEB; padding: 0.55rem 0.85rem; border-radius: var(--radius-md); border: 1px solid #FDE68A; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:0.5rem;">
+        <span style="font-size: 0.85rem; font-weight: 800; color: #92400E;">
+          🌟 ${demo.title} — संपूर्ण लाइव डिज़ाइन (स्क्रॉल करके देखें):
+        </span>
+        <a href="https://wa.me/919876543210?text=नमस्ते%20मोहित%20जी,%20मुझे%20${encodeURIComponent(demo.title)}%20वेबसाइट%20बनवानी%20है।" target="_blank" class="btn-glass btn-glass-green" style="padding:0.3rem 0.75rem; font-size:0.75rem;">
+          💬 यह डिज़ाइन ऑर्डर करें
+        </a>
       </div>
 
-      <!-- Simulated Hero Banner -->
-      <div style="background:linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%); border:1px solid #FDE68A; border-radius:var(--radius-md); padding:1.25rem; margin-bottom:1.25rem; text-align:center;">
-        <h3 style="font-size:1.25rem; font-weight:800; color:#92400E; margin-bottom:0.25rem;">${preview.heroTitle}</h3>
-        <p style="font-size:0.85rem; color:#78350F;">${preview.heroSubtitle}</p>
-      </div>
-
-      <!-- Category Filter Pills -->
-      <div style="display:flex; gap:0.5rem; overflow-x:auto; margin-bottom:1.25rem; padding-bottom:4px;">
-        ${preview.categories.map((c, idx) => `
-          <span style="background:${idx === 0 ? '#1E293B' : '#F1F5F9'}; color:${idx === 0 ? '#FFF' : '#334155'}; padding:0.35rem 0.75rem; border-radius:9999px; font-size:0.75rem; font-weight:700; white-space:nowrap;">
-            ${c}
-          </span>
-        `).join('')}
-      </div>
-
-      <!-- Sample Products / Services Grid -->
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:1rem;">
-        ${preview.items.map(item => `
-          <div style="background:#FFFFFF; border:1px solid #E2E8F0; border-radius:var(--radius-md); padding:1rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
-            <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem;">
-              <span class="tag-pill tag-accent" style="font-size:0.7rem;">${item.tag}</span>
-              <span style="font-size:0.75rem; color:#64748B;">${item.weight}</span>
-            </div>
-            <h4 style="font-size:0.95rem; font-weight:800; color:#0F172A; margin-bottom:0.5rem;">${item.name}</h4>
-            <div style="display:flex; justify-content:space-between; align-items:center; margin-top:0.75rem;">
-              <span style="font-size:1.15rem; font-weight:900; color:#2563EB;">${item.price}</span>
-              <button class="btn-glass btn-glass-amber" style="padding:0.3rem 0.65rem; font-size:0.75rem;" onclick="alert('यह फीचर आपकी वेबसाइट पर 1-टैप में WhatsApp ऑर्डर खोलेगा!');">
-                🛒 खरीदें
-              </button>
-            </div>
-          </div>
-        `).join('')}
+      <div style="width: 100%; display: flex; justify-content: center; background: #FFFFFF; border-radius: var(--radius-md); overflow: hidden; box-shadow: 0 10px 35px rgba(0,0,0,0.12);">
+        <img src="${demo.image}" alt="${demo.title}" style="width: 100%; height: auto; display: block;">
       </div>
     `;
   }
