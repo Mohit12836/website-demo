@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>आपकी अपनी 24x7 डिजिटल दुकान | Mohit Jain Designs - Anu Krupa Digital</title>
+  <meta name="description" content="500+ भारतीय व्यापारियों के लिए तैयार प्रोफेशनल वेबसाइट समाधान। सिर्फ 24-48 घंटे में लाइव। 100% मोबाइल रेडी, WhatsApp ऑर्डर एवं Google SEO के साथ।">
+
+  <!-- Google Fonts for Elite High-Contrast Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Favicon to avoid 404 -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%23FF9900'/><text x='50%' y='68%' font-size='56' font-weight='900' fill='%23111827' text-anchor='middle'>M</text></svg>">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="top-notice-bar">
+    ⚡ <span class="highlight">दीपावली व नववर्ष स्पेशल ऑफर:</span> सभी वेबसाइट डेमो पर डोमेन + हाई-स्पीड होस्टिंग + SSL 1 साल के लिए मुफ्त! | 📞 डायरेक्ट हेल्पलाइन: <a href="tel:+919876543210" style="color:#FFF; text-decoration:underline; font-weight:700;">+91 98765 43210</a>
+  </div>
+
+  <!-- 2. Site Header & Amazon Smart Search -->
+  <header class="site-header">
+    <div class="container main-nav">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="brand-logo" title="Mohit Jain Designs - Anu Krupa Digital">
+        <div class="logo-badge">M</div>
+        <div class="brand-name-group">
+          <span class="brand-title">Mohit Jain Designs</span>
+          <span class="brand-sub">ANU KRUPA DIGITAL • समाधान प्रदाता</span>
+        </div>
+      </a>
+
+      <!-- Amazon-Style Smart Search Bar -->
+      <div class="search-container">
+        <form class="search-wrapper" id="searchForm" onsubmit="event.preventDefault(); handleSearch();">
+          <select class="search-category-select" id="searchCategorySelect" onchange="handleCategoryFilter(this.value);">
+            <option value="all">सभी कैटेगरीज</option>
+            <option value="retail">दुकान व शोरूम</option>
+            <option value="jewelry">ज्वेलरी व फैशन</option>
+            <option value="food">रेस्टोरेंट व फूड</option>
+            <option value="clinic">क्लिनिक व डॉक्टर</option>
+            <option value="furniture">होम डेकोर व फर्नीचर</option>
+            <option value="construction">कंस्ट्रक्शन व हार्डवेयर</option>
+            <option value="education">एजुकेशन व कोचिंग</option>
+            <option value="services">सर्विस सेंटर व CSC</option>
+            <option value="realestate">रियल एस्टेट</option>
+            <option value="travel">ट्रैवल व टूरिज्म</option>
+          </select>
+          <input 
+            type="text" 
+            id="searchInput" 
+            class="search-input" 
+            placeholder="जिस तरह का आपका बिज़नेस है, वो खोजें (जैसे: किराना, कपड़ा, डॉक्टर)..." 
+            oninput="handleSearch();"
+          >
+          <button type="submit" class="search-submit-btn" aria-label="सर्च करें">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+        </form>
+      </div>
+
+      <!-- Action CTAs -->
+      <div class="nav-actions">
+        <a href="#quotationSection" class="btn-glass btn-glass-outline" style="display:none;" id="navQuoteBtn">
+          📋 कोटेशन बनाएं
+        </a>
+        <a href="https://wa.me/919876543210?text=नमस्ते%20मोहित%20जी,%20मुझे%20अपने%20बिज़नेस%20के%20लिए%20वेबसाइट%20समाधान%20चाहिए।" target="_blank" rel="noopener" class="btn-glass btn-glass-green">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.584 1.942.88 2.791.88 3.182 0 5.768-2.587 5.768-5.766.001-3.18-2.585-5.766-5.768-5.766zm9.969 5.766c0 5.514-4.486 10-10 10-1.748 0-3.385-.45-4.821-1.242l-5.179 1.354 1.378-5.039c-.878-1.488-1.378-3.226-1.378-5.073 0-5.514 4.486-10 10-10s10 4.486 10 10z"/>
+          </svg>
+          WhatsApp पर पूछताछ
+        </a>
+        <a href="#catalogSection" class="btn-glass btn-glass-amber">
+          ⚡ डेमो देखें
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- 3. Hero Section (Replicating Image 1 with Glass & Solution Framing) -->
+  <section class="hero-section">
+    <div class="container hero-grid">
+      
+      <!-- Left Column: Value Proposition -->
+      <div class="hero-content-col">
+        <div class="hero-pill-badge">
+          <span>🚀 500+ बिज़नेस के लिए तैयार प्रोफेशनल समाधान</span>
+        </div>
+        
+        <h1 class="hero-title">
+          आपकी अपनी <span class="hero-highlight">24x7 डिजिटल दुकान</span>
+        </h1>
+        
+        <p class="hero-subtext">
+          सिर्फ एक साधारण वेबसाइट नहीं — आपके व्यापार को हमेशा ऑनलाइन रखने, बिना किसी कमीशन के WhatsApp पर सीधे ऑर्डर लेने और नए ग्राहक जोड़ने का पूरा <strong>व्यापार समाधान</strong>!
+        </p>
+
+        <!-- CTA Buttons with Light Wave Animation -->
+        <div class="hero-cta-group">
+          <a href="#catalogSection" class="btn-glass btn-glass-amber">
+            <span>⚡ लाइव डेमो वेबसाइट देखें</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          
+          <a href="#quotationSection" class="btn-glass btn-glass-outline">
+            <span>📋 1-मिनट में तुरंत कोटेशन बनाएं</span>
+          </a>
+        </div>
+
+        <!-- Trust Features Bar -->
+        <div class="trust-bar">
+          <div class="trust-item">
+            <span style="color:#F59E0B;">⚡</span>
+            <span>24-48 घंटे में लाइव</span>
+          </div>
+          <div class="trust-item">
+            <span style="color:#10B981;">🛡️</span>
+            <span>100% मोबाइल रेडी</span>
+          </div>
+          <div class="trust-item">
+            <span style="color:#2563EB;">⭐</span>
+            <span>हर बिज़नेस के लिए डेमो</span>
+          </div>
+          <div class="trust-item">
+            <span style="color:#7C3AED;">💰</span>
+            <span>0% कमीशन, 100% आपका मुनाफा</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Visual 3D Showcase (Laptop & Mobile) -->
+      <div class="hero-visual-col">
+        <div class="hero-visual-card">
+          <div class="hero-device-wrapper">
+            <img 
+              src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1000&q=80" 
+              alt="24x7 Digital Dukan Solution Preview" 
+              class="device-screen-img"
+            >
+          </div>
+
+          <!-- Floating Badges -->
+          <div class="floating-badge badge-top-left">
+            <span style="font-size: 1.1rem;">🛒</span>
+            <div>
+              <div style="color:var(--text-dark);">ऑनलाइन ऑर्डर</div>
+              <div style="font-size:0.7rem; color:#10B981; font-weight:800;">सीधा WhatsApp पर</div>
+            </div>
+          </div>
+
+          <div class="floating-badge badge-bottom-right">
+            <span style="font-size: 1.1rem;">📈</span>
+            <div>
+              <div style="color:var(--text-dark);">कस्टमर व बिक्री</div>
+              <div style="font-size:0.7rem; color:#2563EB; font-weight:800;">+45% तक वृद्धि</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. Interactive Problem-to-Solution Matcher (Solution Provider Core) -->
+  <section class="solution-matcher-section">
+    <div class="container">
+      <div class="matcher-header">
+        <span class="hero-pill-badge" style="margin-bottom:0.75rem;">💡 व्यापार समाधान खोजक</span>
+        <h2 style="font-size:clamp(1.5rem, 2.5vw, 2.2rem); margin-bottom:0.5rem;">
+          आपका बिज़नेस क्या है? जानिए आपकी सबसे बड़ी मुश्किल कैसे हल होगी:
+        </h2>
+        <p style="font-size:0.95rem;">नीचे अपना बिज़नेस चुनें और देखें कि यह डिजिटल समाधान आपके लिए नए ग्राहक कैसे लाएगा:</p>
+      </div>
+
+      <!-- Tab Buttons for Matching -->
+      <div class="matcher-tabs" id="matcherTabs">
+        <button class="matcher-tab-btn active" onclick="switchMatcherTab('retail', this)">🏪 दुकान व सुपरमार्ट</button>
+        <button class="matcher-tab-btn" onclick="switchMatcherTab('jewelry', this)">💍 ज्वेलरी शोरूम</button>
+        <button class="matcher-tab-btn" onclick="switchMatcherTab('food', this)">🍽️ रेस्टोरेंट व कैफे</button>
+        <button class="matcher-tab-btn" onclick="switchMatcherTab('clinic', this)">🩺 क्लिनिक व डॉक्टर</button>
+        <button class="matcher-tab-btn" onclick="switchMatcherTab('services', this)">🔧 CSC व सर्विस सेंटर</button>
+        <button class="matcher-tab-btn" onclick="switchMatcherTab('education', this)">🎓 कोचिंग व स्कूल</button>
+      </div>
+
+      <!-- Matcher Dynamic Output Box -->
+      <div class="matcher-result-box" id="matcherResultBox">
+        <div>
+          <div style="font-size:0.85rem; font-weight:800; color:#B45309; text-transform:uppercase; margin-bottom:0.4rem;" id="matchBadge">
+            🏪 दुकान व शोरूम समाधान
+          </div>
+          <div style="font-size:1.15rem; font-weight:800; color:var(--text-dark); margin-bottom:0.5rem;">
+            ❌ परेशानी: <span id="matchPain" style="font-weight:600; color:#475569;">दुकान में बैठे रहने पर केवल आसपास के लोग आते हैं, बाकी लोग ऑनलाइन खरीद लेते हैं।</span>
+          </div>
+          <div style="font-size:1.15rem; font-weight:800; color:#15803D; margin-bottom:0.75rem;">
+            ✅ समाधान: <span id="matchSolution" style="font-weight:600; color:#1F2937;">आपकी दुकान की हर वैरायटी अब पूरे शहर के मोबाइल में दिखेगी। ग्राहक घर बैठे सामान चुनकर सीधे WhatsApp पर ऑर्डर देंगे!</span>
+          </div>
+          <div style="font-size:0.9rem; font-weight:700; color:#1E40AF;">
+            📊 अपेक्षित नतीजा: <span id="matchSales" style="font-weight:800; color:#2563EB;">30% से 50% अधिक दैनिक बिक्री</span>
+          </div>
+        </div>
+
+        <div style="text-align:center;">
+          <button class="btn-glass btn-glass-amber" id="matchDemoBtn" onclick="openDemoById('grocery-07')" style="width:100%; margin-bottom:0.5rem;">
+            👀 इस समाधान का लाइव डेमो देखें
+          </button>
+          <a href="#quotationSection" class="btn-glass btn-glass-outline" style="width:100%; font-size:0.85rem;" onclick="selectDemoInQuote('grocery-07')">
+            📋 इस डेमो का कोटेशन बनाएं
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 5. Amazon-Style Category Pills Navigation (Image 1 replica) -->
+  <nav class="categories-nav-section" id="categoriesNav">
+    <div class="container">
+      <div class="category-pills-scroll" id="categoryPillsList">
+        <button class="cat-pill active" onclick="filterByPill('all', this)">
+          <span>🌟</span> सभी समाधान (All)
+        </button>
+        <button class="cat-pill" onclick="filterByPill('retail', this)">
+          <span>🏪</span> दुकान व शोरूम
+        </button>
+        <button class="cat-pill" onclick="filterByPill('jewelry', this)">
+          <span>💍</span> ज्वेलरी व फैशन
+        </button>
+        <button class="cat-pill" onclick="filterByPill('food', this)">
+          <span>🍽️</span> रेस्टोरेंट व फूड
+        </button>
+        <button class="cat-pill" onclick="filterByPill('clinic', this)">
+          <span>🩺</span> क्लिनिक व डॉक्टर
+        </button>
+        <button class="cat-pill" onclick="filterByPill('furniture', this)">
+          <span>🛋️</span> होम डेकोर व फर्नीचर
+        </button>
+        <button class="cat-pill" onclick="filterByPill('construction', this)">
+          <span>🏗️</span> कंस्ट्रक्शन व हार्डवेयर
+        </button>
+        <button class="cat-pill" onclick="filterByPill('education', this)">
+          <span>🎓</span> एजुकेशन व कोचिंग
+        </button>
+        <button class="cat-pill" onclick="filterByPill('services', this)">
+          <span>🔧</span> सर्विस सेंटर व CSC
+        </button>
+        <button class="cat-pill" onclick="filterByPill('realestate', this)">
+          <span>🏢</span> रियल एस्टेट
+        </button>
+        <button class="cat-pill" onclick="filterByPill('travel', this)">
+          <span>✈️</span> ट्रैवल व टिकट
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 6. Demo Solutions Catalog Grid (Amazon Style Cards with Shimmering Light Waves) -->
+  <section class="catalog-section" id="catalogSection">
+    <div class="container">
+      
+      <!-- Catalog Section Header with Live Counts -->
+      <div class="catalog-header-flex">
+        <div>
+          <span style="font-size:0.8rem; font-weight:800; color:#D97706; text-transform:uppercase; letter-spacing:0.08em;">POPULAR DEMOS</span>
+          <h2 class="section-title">लोकप्रिय वेबसाइट समाधान & डेमो</h2>
+          <p>विभिन्न बिज़नेस के लिए तैयार प्रोफेशनल, मोबाइल-फ्रेंडली और आकर्षक वेबसाइट डिज़ाइन्स</p>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:0.75rem;">
+          <span style="font-size:0.9rem; font-weight:700; color:var(--text-muted);" id="resultsCountBadge">
+            12 समाधान उपलब्ध
+          </span>
+          <select id="sortSelect" onchange="handleSort(this.value);" style="padding:0.55rem 0.85rem; border-radius:var(--radius-md); border:1px solid #CBD5E1; background:#FFF; font-weight:600; font-size:0.85rem;">
+            <option value="popular">लोकप्रियता (Popularity)</option>
+            <option value="price-low">कीमत: कम से ज्यादा</option>
+            <option value="price-high">कीमत: ज्यादा से कम</option>
+            <option value="rating">उच्चतम रेटिंग</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Dynamic Cards Grid -->
+      <div class="grid-auto-fit" id="solutionsGrid">
+        <!-- Injected via JavaScript from SOLUTIONS_DATA -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 7. Interactive Step-by-Step Quotation & Scope Builder (Image 2 Replica) -->
+  <section class="quotation-builder-section" id="quotationSection">
+    <div class="container">
+      
+      <!-- Header -->
+      <div style="text-align:center; max-width:750px; margin-inline:auto; margin-bottom:2rem;">
+        <span class="hero-pill-badge">📄 पारदर्शी कोटेशन सिस्टम</span>
+        <h2 class="section-title">अपनी वेबसाइट का सटीक कोटेशन बनाएं</h2>
+        <p>अपनी जरूरत के फीचर्स चुनें — तुरंत कंप्यूटर-जनरेटेड कोटेशन बिल देखें, WhatsApp पर भेजें या PDF में डाउनलोड करें।</p>
+      </div>
+
+      <!-- Stepper Indicator -->
+      <div class="quote-stepper-bar">
+        <div class="step-item completed" id="stepIndicator1">
+          <span class="step-circle">1</span>
+          <span>बिज़नेस जानकारी</span>
+        </div>
+        <div style="width:30px; height:2px; background:#CBD5E1;"></div>
+        <div class="step-item active" id="stepIndicator2">
+          <span class="step-circle">2</span>
+          <span>फीचर्स चयन</span>
+        </div>
+        <div style="width:30px; height:2px; background:#CBD5E1;"></div>
+        <div class="step-item" id="stepIndicator3">
+          <span class="step-circle">3</span>
+          <span>कोटेशन बिल</span>
+        </div>
+        <div style="width:30px; height:2px; background:#CBD5E1;"></div>
+        <div class="step-item" id="stepIndicator4">
+          <span class="step-circle">4</span>
+          <span>कन्फर्म करें</span>
+        </div>
+      </div>
+
+      <!-- 2-Column Quotation Layout -->
+      <div class="quotation-layout-grid">
+        
+        <!-- Left Column: The Interactive Quotation Document (Image 2 Replica) -->
+        <div class="quote-paper-card" id="printableQuoteCard">
+          
+          <!-- Document Header -->
+          <div class="quote-paper-header">
+            <div style="display:flex; align-items:center; gap:0.75rem;">
+              <div class="logo-badge" style="width:40px; height:40px; font-size:1.2rem;">M</div>
+              <div>
+                <h3 style="font-size:1.2rem; color:var(--text-dark);">Mohit Jain Designs</h3>
+                <p style="font-size:0.75rem; color:#D97706; font-weight:700;">ANU KRUPA DIGITAL</p>
+              </div>
+            </div>
+
+            <div class="quote-meta-box">
+              <div style="font-weight:800; color:#2563EB;" id="quoteNumber">कोटेशन नं: #MJ-20261025-001</div>
+              <div id="quoteDate">दिनांक: 25 Oct 2026</div>
+              <div style="color:#10B981; font-weight:700;">मान्य अवधि: 7 दिन (ऑफर रेट्स)</div>
+            </div>
+          </div>
+
+          <div style="margin-bottom:1.5rem;">
+            <h2 style="font-size:1.5rem; font-weight:900; color:#1E40AF; text-transform:uppercase; letter-spacing:0.02em;">
+              WEBSITE QUOTATION
+            </h2>
+            <p style="font-size:0.9rem;">Professional Website Solution for Your Business</p>
+          </div>
+
+          <!-- Client & Demo Summary Row -->
+          <div class="client-demo-row">
+            <div>
+              <div style="font-size:0.75rem; font-weight:800; color:#64748B; text-transform:uppercase; margin-bottom:0.4rem;">क्लाइंट विवरण</div>
+              <div style="font-size:0.95rem; font-weight:700; color:var(--text-dark);" id="displayClientName">दीपक हाड़ा</div>
+              <div style="font-size:0.85rem; color:var(--text-muted);" id="displayBusinessName">बालाजी ऑनलाइन & ई-मित्र सेंटर</div>
+              <div style="font-size:0.85rem; color:var(--text-muted);" id="displayLocation">रतलाम (मध्य प्रदेश)</div>
+              <div style="font-size:0.85rem; color:#2563EB; font-weight:600;" id="displayPhone">+91 98765 43210</div>
+            </div>
+
+            <div style="border-left:1px solid #E2E8F0; padding-left:1rem;" id="selectedDemoPreviewCol">
+              <div style="font-size:0.75rem; font-weight:800; color:#64748B; text-transform:uppercase; margin-bottom:0.4rem;">चुना हुआ समाधान / डेमो</div>
+              <div style="font-size:0.95rem; font-weight:700; color:var(--text-dark);" id="displayDemoTitle">ऑनलाइन सेंटर वेबसाइट</div>
+              <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.5rem;" id="displayDemoDesc">रेलवे टिकट, पैन कार्ड, आधार व कियोस्क पोर्टल</div>
+              <button class="btn-glass btn-glass-outline" style="padding:0.35rem 0.75rem; font-size:0.8rem;" onclick="openSelectedDemoModal();">
+                👁️ डेमो देखें
+              </button>
+            </div>
+          </div>
+
+          <!-- Quick Edit Input Toggles for Client Info -->
+          <details style="margin-bottom:1.5rem; background:#F1F5F9; padding:0.75rem 1rem; border-radius:var(--radius-md);">
+            <summary style="font-size:0.85rem; font-weight:700; color:#2563EB; cursor:pointer;">
+              ✏️ अपनी दुकान/बिज़नेस का नाम व फोन नंबर बदलें
+            </summary>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:0.75rem; margin-top:0.75rem;">
+              <input type="text" id="inputClientName" placeholder="आपका शुभ नाम" value="दीपक हाड़ा" oninput="updateClientDetails();" style="padding:0.5rem; border:1px solid #CBD5E1; border-radius:var(--radius-sm); font-size:0.85rem;">
+              <input type="text" id="inputBusinessName" placeholder="दुकान / कंपनी का नाम" value="बालाजी ऑनलाइन सेंटर" oninput="updateClientDetails();" style="padding:0.5rem; border:1px solid #CBD5E1; border-radius:var(--radius-sm); font-size:0.85rem;">
+              <input type="text" id="inputCity" placeholder="शहर / राज्य" value="रतलाम (म.प्र.)" oninput="updateClientDetails();" style="padding:0.5rem; border:1px solid #CBD5E1; border-radius:var(--radius-sm); font-size:0.85rem;">
+              <input type="tel" id="inputPhone" placeholder="WhatsApp नंबर" value="9876543210" oninput="updateClientDetails();" style="padding:0.5rem; border:1px solid #CBD5E1; border-radius:var(--radius-sm); font-size:0.85rem;">
+            </div>
+          </details>
+
+          <!-- Feature Item List with Checkboxes -->
+          <div style="margin-bottom:0.75rem;">
+            <h4 style="font-size:1.05rem; font-weight:800; color:var(--text-dark); margin-bottom:0.35rem;">शामिल फीचर्स व सेवाएं (अपनी पसंद से चुनें)</h4>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">नीचे दिए गए किसी भी फीचर को टिक या अनटिक करें — कुल राशि तुरंत अपने आप अपडेट होगी:</p>
+          </div>
+
+          <div class="features-config-list" id="featuresConfigList">
+            <!-- Injected via JavaScript from QUOTATION_FEATURES -->
+          </div>
+
+          <!-- Total Calculation Row -->
+          <div class="quote-total-bar">
+            <div>
+              <div style="font-size:0.85rem; font-weight:800; color:#1E40AF; text-transform:uppercase;">कुल अनुमानित राशि (Total Amount)</div>
+              <div style="font-size:0.75rem; color:#475569;">बिना किसी छुपे हुए चार्ज के (पारदर्शी बिलिंग)</div>
+            </div>
+            <div class="quote-total-amount" id="totalAmountText">₹ 14,999</div>
+          </div>
+
+          <!-- Bottom Micro Guarantees -->
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(130px, 1fr)); gap:0.75rem; padding-top:1rem; border-top:1px solid #E2E8F0; text-align:center;">
+            <div>
+              <div style="font-size:0.75rem; color:var(--text-muted);">⏱️ डिलीवरी समय</div>
+              <div style="font-size:0.85rem; font-weight:800; color:var(--text-dark);">24 से 48 घंटे</div>
+            </div>
+            <div>
+              <div style="font-size:0.75rem; color:var(--text-muted);">🛡️ सपोर्ट</div>
+              <div style="font-size:0.85rem; font-weight:800; color:var(--text-dark);">1 माह VIP फ्री</div>
+            </div>
+            <div>
+              <div style="font-size:0.75rem; color:var(--text-muted);">🔄 संशोधन</div>
+              <div style="font-size:0.85rem; font-weight:800; color:var(--text-dark);">2 बार फ्री बदलाव</div>
+            </div>
+            <div>
+              <div style="font-size:0.75rem; color:var(--text-muted);">🔒 टेक्नोलॉजी</div>
+              <div style="font-size:0.85rem; font-weight:800; color:var(--text-dark);">फास्ट & मॉडर्न</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Quotation Actions & Trust (Image 2 Replica) -->
+        <div class="quote-action-panel">
+          
+          <!-- Actions Box -->
+          <div class="glass-panel" style="padding:1.5rem;">
+            <h4 style="font-size:1.1rem; font-weight:800; margin-bottom:1rem; color:var(--text-dark);">
+              कोटेशन एक्शन (Quotation Actions)
+            </h4>
+
+            <div style="display:flex; flex-direction:column; gap:0.75rem;">
+              <button class="btn-glass btn-glass-green" onclick="shareQuotationOnWhatsApp();" style="width:100%;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.584 1.942.88 2.791.88 3.182 0 5.768-2.587 5.768-5.766.001-3.18-2.585-5.766-5.768-5.766zm9.969 5.766c0 5.514-4.486 10-10 10-1.748 0-3.385-.45-4.821-1.242l-5.179 1.354 1.378-5.039c-.878-1.488-1.378-3.226-1.378-5.073 0-5.514 4.486-10 10-10s10 4.486 10 10z"/>
+                </svg>
+                WhatsApp पर शेयर करें
+              </button>
+
+              <button class="btn-glass btn-glass-amber" onclick="printQuotationPDF();" style="width:100%;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                कोटेशन डाउनलोड (PDF/Print)
+              </button>
+
+              <button class="btn-glass btn-glass-outline" onclick="requestCustomChanges();" style="width:100%;">
+                ✏️ कुछ अलग बदलाव चाहिए?
+              </button>
+            </div>
+          </div>
+
+          <!-- Why Choose Us Trust Box (Image 2 style) -->
+          <div class="glass-panel" style="padding:1.5rem;">
+            <h4 style="font-size:1.1rem; font-weight:800; margin-bottom:1rem; color:var(--text-dark);">
+              हम ही क्यों? (Why Choose Us?)
+            </h4>
+
+            <ul class="trust-check-list">
+              <li>
+                <span style="color:#10B981; font-size:1.1rem;">✔</span>
+                <span>500+ संतुष्ट एवं खुश व्यापारी ग्राहक</span>
+              </li>
+              <li>
+                <span style="color:#10B981; font-size:1.1rem;">✔</span>
+                <span>100% मॉडर्न और ऑटो-रिस्पॉन्सिव डिज़ाइन</span>
+              </li>
+              <li>
+                <span style="color:#10B981; font-size:1.1rem;">✔</span>
+                <span>मोबाइल पर बिजली जैसी सुपरफास्ट स्पीड</span>
+              </li>
+              <li>
+                <span style="color:#10B981; font-size:1.1rem;">✔</span>
+                <span>Google सर्च में पहले पेज पर लाने वाला SEO</span>
+              </li>
+              <li>
+                <span style="color:#10B981; font-size:1.1rem;">✔</span>
+                <span>1 महीने का VIP सपोर्ट एवं मेंटेनेंस बिल्कुल फ्री</span>
+              </li>
+              <li>
+                <span style="color:#10B981; font-size:1.1rem;">✔</span>
+                <span>0% एडवांस जोखिम — संतुष्टि होने पर ही पूरा पेमेंट!</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Need Help Direct Chat Box -->
+          <div class="glass-panel" style="padding:1.25rem; background:linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%); border-color:#BFDBFE;">
+            <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
+              <span style="font-size:1.5rem;">🎧</span>
+              <div>
+                <h5 style="font-size:1rem; font-weight:800; color:#1E40AF;">कोई सवाल या संकोच है?</h5>
+                <p style="font-size:0.8rem; color:#1E3A8A;">हमारे सीनियर वेब कंसलटेंट से सीधे बात करें</p>
+              </div>
+            </div>
+            <a href="https://wa.me/919876543210?text=नमस्ते,%20मुझे%20कोटेशन%20के%20बारे%20में%20कुछ%20पूछना%20है।" target="_blank" class="btn-glass btn-glass-green" style="width:100%; font-size:0.9rem;">
+              WhatsApp पर बात करें
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 8. Interactive ROI & Business Growth Calculator -->
+  <section style="padding-block:clamp(2.5rem, 4vw, 4rem); background:#FFFFFF; border-top:1px solid #E2E8F0;">
+    <div class="container" style="max-width:960px;">
+      
+      <div style="text-align:center; margin-bottom:2rem;">
+        <span class="hero-pill-badge" style="background:#ECFDF5; border-color:#A7F3D0; color:#047857;">📈 मुनाफे का गणित</span>
+        <h2 class="section-title">वेबसाइट आपका खर्च नहीं — मुनाफा बनाने की मशीन है</h2>
+        <p>खुद कैलकुलेट करके देखें कि डिजिटल दुकान से आपकी महीने की कितनी अतिरिक्त कमाई होगी:</p>
+      </div>
+
+      <div class="glass-panel" style="padding:clamp(1.5rem, 3vw, 2.5rem); background:linear-gradient(135deg, #F0FDF4 0%, #FFFFFF 100%); border-color:#86EFAC;">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:2rem; align-items:center;">
+          
+          <div>
+            <label style="display:block; font-size:0.95rem; font-weight:700; color:var(--text-dark); margin-bottom:0.5rem;">
+              दुकान से औसतन 1 ग्राहक से मुनाफा (₹):
+            </label>
+            <input type="range" id="roiProfitPerCustomer" min="100" max="2000" step="50" value="400" oninput="calculateROI();" style="width:100%; accent-color:#16A34A; margin-bottom:0.5rem;">
+            <div style="display:flex; justify-content:space-between; font-size:0.85rem; font-weight:700; color:#15803D; margin-bottom:1.5rem;">
+              <span>₹100</span>
+              <span id="roiProfitDisplay">₹400 प्रति ग्राहक</span>
+              <span>₹2000</span>
+            </div>
+
+            <label style="display:block; font-size:0.95rem; font-weight:700; color:var(--text-dark); margin-bottom:0.5rem;">
+              वेबसाइट से रोज़ाना नए ऑर्डर / इन्क्वायरी (अनुमानित):
+            </label>
+            <input type="range" id="roiDailyOrders" min="1" max="25" step="1" value="4" oninput="calculateROI();" style="width:100%; accent-color:#16A34A; margin-bottom:0.5rem;">
+            <div style="display:flex; justify-content:space-between; font-size:0.85rem; font-weight:700; color:#15803D;">
+              <span>1 ग्राहक</span>
+              <span id="roiOrdersDisplay">4 ग्राहक रोज़ाना</span>
+              <span>25 ग्राहक</span>
+            </div>
+          </div>
+
+          <div style="background:#FFFFFF; border:2px solid #86EFAC; border-radius:var(--radius-lg); padding:1.75rem; text-align:center; box-shadow:0 10px 25px rgba(22, 163, 74, 0.1);">
+            <div style="font-size:0.85rem; font-weight:800; color:#15803D; text-transform:uppercase; margin-bottom:0.25rem;">
+              अपेक्षित अतिरिक्त मासिक मुनाफा
+            </div>
+            <div style="font-size:clamp(2rem, 3.5vw, 3rem); font-weight:900; color:#166534; line-height:1.1; margin-bottom:0.5rem;" id="roiTotalMonthlyGain">
+              ₹ 48,000
+            </div>
+            <p style="font-size:0.85rem; color:#475569; margin-bottom:1rem;">
+              यानी आपकी वेबसाइट की पूरी लागत <strong style="color:#15803D;" id="roiPaybackDays">सिर्फ 8 से 10 दिनों</strong> में वसूल हो जाएगी!
+            </p>
+            <a href="#quotationSection" class="btn-glass btn-glass-green" style="width:100%;">
+              🚀 आज ही अपनी डिजिटल दुकान शुरू करें
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 9. Interactive Live Demo Simulator Modal (Desktop & Mobile Switcher) -->
+  <div class="demo-modal-backdrop" id="demoModal">
+    <div class="demo-modal-container">
+      
+      <!-- Modal Top Controls -->
+      <div class="demo-modal-header">
+        <div class="modal-title-wrap">
+          <span style="font-size:1.05rem; font-weight:800;" id="modalDemoTitle">लाइव डेमो प्रीव्यू</span>
+          <span class="tag-pill tag-accent" id="modalDemoTag">100% रिस्पॉन्सिव</span>
+        </div>
+
+        <div class="modal-ctrls-wrap">
+          <!-- Device Toggle (Desktop / Mobile) -->
+          <div class="device-switcher-group">
+            <button class="device-btn active" id="btnDeviceDesktop" onclick="setDemoDevice('desktop');">
+              💻 लैपटॉप
+            </button>
+            <button class="device-btn" id="btnDeviceMobile" onclick="setDemoDevice('mobile');">
+              📱 मोबाइल
+            </button>
+          </div>
+
+          <!-- Close Modal Button -->
+          <button onclick="closeDemoModal();" class="modal-close-x-btn" title="बंद करें">
+            ✕
+          </button>
+        </div>
+      </div>
+
+      <!-- Preview Frame -->
+      <div class="demo-preview-frame">
+        <div class="simulated-screen" id="simulatedScreen">
+          <!-- Dynamic Simulated Webpage Rendered inside -->
+          <div id="simulatedInnerContent" style="padding:1.5rem;">
+            <!-- Injected via JavaScript based on selected demo -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Bottom Actions -->
+      <div class="demo-modal-footer">
+        <span style="font-size:0.85rem; color:var(--text-muted);">
+          पसंद आया? इसे अपनी दुकान के नाम व फोटो के साथ 24 घंटे में बनवाएं!
+        </span>
+        <button class="btn-glass btn-glass-amber" id="modalSelectDemoBtn" onclick="applyDemoToQuoteFromModal();">
+          📋 यह वेबसाइट मुझे चाहिए (कोटेशन बनाएं)
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 10. Sticky Mobile Bottom Conversion Bar -->
+  <div class="mobile-sticky-bar">
+    <a href="tel:+919876543210" class="btn-glass btn-glass-outline" style="flex:1; padding:0.6rem 0.5rem; font-size:0.85rem;">
+      📞 तुरंत कॉल
+    </a>
+    <a href="#quotationSection" class="btn-glass btn-glass-amber" style="flex:1; padding:0.6rem 0.5rem; font-size:0.85rem;">
+      📋 कोटेशन
+    </a>
+    <a href="https://wa.me/919876543210?text=नमस्ते,%20मुझे%20वेबसाइट%20बनवानी%20है।" target="_blank" class="btn-glass btn-glass-green" style="flex:1.2; padding:0.6rem 0.5rem; font-size:0.85rem;">
+      💬 WhatsApp
+    </a>
+  </div>
+
+  <!-- 11. Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <div class="footer-grid">
+        <div>
+          <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.75rem;">
+            <div class="logo-badge" style="width:36px; height:36px; font-size:1.1rem;">M</div>
+            <span style="font-weight:900; font-size:1.1rem; color:var(--text-dark);">Mohit Jain Designs</span>
+          </div>
+          <p style="font-size:0.85rem; margin-bottom:1rem;">
+            ANU KRUPA DIGITAL — भारत के छोटे एवं मध्यम व्यापारियों के लिए आधुनिक, भरोसेमंद और बिक्री बढ़ाने वाले डिजिटल समाधान।
+          </p>
+          <div style="font-size:0.85rem; font-weight:700; color:var(--text-dark);">
+            📍 हेड ऑफिस: रतलाम एवं इंदौर (मध्य प्रदेश)
+          </div>
+        </div>
+
+        <div>
+          <h4 style="font-size:0.95rem; font-weight:800; color:var(--text-dark); margin-bottom:0.75rem;">लोकप्रिय कैटेगरीज</h4>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:0.45rem; font-size:0.85rem;">
+            <li><a href="#catalogSection" onclick="filterByPill('jewelry')" style="color:var(--text-muted); text-decoration:none;">ज्वेलरी व फैशन शोरूम</a></li>
+            <li><a href="#catalogSection" onclick="filterByPill('retail')" style="color:var(--text-muted); text-decoration:none;">किराना व सुपरमार्केट</a></li>
+            <li><a href="#catalogSection" onclick="filterByPill('food')" style="color:var(--text-muted); text-decoration:none;">रेस्टोरेंट व डिजिटल मेनू</a></li>
+            <li><a href="#catalogSection" onclick="filterByPill('clinic')" style="color:var(--text-muted); text-decoration:none;">डॉक्टर क्लिनिक व टोकन सिस्टम</a></li>
+            <li><a href="#catalogSection" onclick="filterByPill('services')" style="color:var(--text-muted); text-decoration:none;">ऑनलाइन व CSC कियोस्क</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="font-size:0.95rem; font-weight:800; color:var(--text-dark); margin-bottom:0.75rem;">हमारी गारंटी</h4>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:0.45rem; font-size:0.85rem;">
+            <li>⚡ 24 से 48 घंटे में गारंटीड डिलीवरी</li>
+            <li>🔒 100% सुरक्षित सर्वर एवं SSL सर्टिफिकेट</li>
+            <li>📱 सभी मोबाइल एवं टैबलेट पर सटीक फिट</li>
+            <li>🤝 लाइफटाइम डोमेन व डेटा ओनरशिप आपके पास</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="font-size:0.95rem; font-weight:800; color:var(--text-dark); margin-bottom:0.75rem;">सीधा संपर्क करें</h4>
+          <p style="font-size:0.85rem; margin-bottom:0.5rem;">
+            <strong>फोन:</strong> +91 98765 43210<br>
+            <strong>WhatsApp:</strong> +91 98765 43210<br>
+            <strong>ईमेल:</strong> contact@mohitjaindesigns.com
+          </p>
+          <a href="https://wa.me/919876543210" target="_blank" class="btn-glass btn-glass-green" style="font-size:0.85rem; padding:0.5rem 1rem;">
+            कॉल / चैट शुरू करें
+          </a>
+        </div>
+      </div>
+
+      <div style="text-align:center; padding-top:1.5rem; border-top:1px solid #E2E8F0; font-size:0.8rem; color:#94A3B8;">
+        © 2026 Mohit Jain Designs - Anu Krupa Digital. सर्वाधिकार सुरक्षित। भारतीय व्यापार को डिजिटल बनाने का संकल्प।
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
