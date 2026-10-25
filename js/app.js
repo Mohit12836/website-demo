@@ -322,6 +322,10 @@ function selectDemoInQuote(demoId) {
 
   if (document.getElementById('displayDemoTitle')) document.getElementById('displayDemoTitle').textContent = demo.title;
   if (document.getElementById('displayDemoDesc')) document.getElementById('displayDemoDesc').textContent = demo.tagline;
+  const thumb = document.getElementById('displayDemoThumb');
+  if (thumb && demo.image) {
+    thumb.src = demo.image;
+  }
 
   // Scroll to Quotation Builder
   const quoteSection = document.getElementById('quotationSection');

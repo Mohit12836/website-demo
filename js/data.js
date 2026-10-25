@@ -16,7 +16,7 @@ const SOLUTIONS_DATA = [
     reviewsCount: 142,
     badge: "Most Popular",
     badgeColor: "amber",
-    image: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=80",
+    image: "assets/demo_jain_jewellers.jpg",
     tags: ["Responsive", "Live Gold Rate", "WhatsApp Enquiry", "SEO Ready"],
     features: [
       "आज का लाइव 22K/24K सोने-चांदी का रेट टिकर",
@@ -52,7 +52,7 @@ const SOLUTIONS_DATA = [
     reviewsCount: 98,
     badge: "Trending",
     badgeColor: "blue",
-    image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80",
+    image: "assets/demo_furnihome.jpg",
     tags: ["3D Gallery", "Room Planner", "WhatsApp Booking", "Mobile First"],
     features: [
       "सोफा, बेड, डाइनिंग टेबल की रूम-वाइज़ कैटलॉग",
@@ -88,7 +88,7 @@ const SOLUTIONS_DATA = [
     reviewsCount: 215,
     badge: "Value For Money",
     badgeColor: "emerald",
-    image: "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=800&q=80",
+    image: "assets/demo_balaji_online.jpg",
     tags: ["Document Checklist", "Instant WhatsApp", "Service Rates", "Trust Badges"],
     features: [
       "सभी 50+ सरकारी व ऑनलाइन सेवाओं की सूची व फीस",
